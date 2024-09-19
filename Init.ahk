@@ -14,6 +14,7 @@
 #Include module/Teleport.ahk
 #Include module/Achievement.ahk
 #Include module/Team.ahk
+#Include module/Nircmd.ahk
 
 ; 构建脚本模式实例
 script_mode := ScriptMode()
@@ -56,10 +57,8 @@ script_mode := ScriptMode()
     SetTimer(clickPlus, 50)
 }
 
-; 还没适配16:9，最后再搞
-
-
-; 调用nircmd调整星铁的音量
+; 调用nircmd调整游戏的音量
+^3:: Nircmd.adjust_volume()
 
 
 ; 在场景为大世界的时候启用以下功能
